@@ -1,0 +1,100 @@
+/*-------Header-------*/
+header{margin-top: 10px;}
+header img{position: absolute;top: 10px;left: 8%;}
+/*---TopNav---*/
+.topnav{margin-left: 25%;overflow: hidden;}
+.topnav a{padding: 16px 4%;float: left;display: block;text-align: center;text-decoration: none;font-size: 17px;color: black;}
+.topnav a:hover{background-color: white;color: black;}
+.topnav .icon{display: none;}
+/*BurgerIcon*/
+.burger{width: 32px;height: 4px;background-color: black;margin: 7px 0;}
+.change #burger1{transform: rotate(-45deg) translate(-9px, 6px);}
+.change #burger2{opacity: 0;}
+.change #burger3{transform: rotate(45deg) translate(-8px, -8px);}
+/*-------\Header-------*/
+
+/*-------Apply-------*/
+.apply,.content,.imgApply{height: 681px;max-height: 681px;overflow: hidden;}
+.apply{margin-left: 8%;}
+.content{padding-left: 0;padding-right: 0;}
+.content h2{margin-top: 165px;font-size: 56px;}
+.content #txt-content{margin-top: 25px;font-size: 22px;}
+.content a{margin-top: 50px;}
+.resaux{margin-top: 90px;margin-right: 2%;}
+/*---Button---*/
+.btn-grad {width: 200px;height: 50px;margin: 10px;margin-left: 0;padding: 30px;
+		background-color: #8471FF;background-size: 200% auto;color: white;
+		text-align: center;text-shadow: 0px 0px 10px rgba(0,0,0,0.2);box-shadow: 0 0 2px black;
+    transition: 0.5s;border-radius: 10px;display: block;}
+.btn-grad:hover { background-position: right center;text-decoration: none;color: white;}
+/*---img--*/
+#oval{position: absolute;top: 270px;left: 35px;}
+#etudiante{position: absolute;top: 116px;}
+/*-------\Apply-------*/
+
+/*-------Featured-------*/
+.featured{background-color: #FAFAFA;height: 423px;position: absolute;top: 748px;width: 100%;}
+.featured h3{text-align: center;text-transform: uppercase;font-weight: 100;margin-top: 55px;}
+/*-------\Featured-------*/
+
+.txt-blue{color: blue;}
+
+/*-------Responsive BurgerMenu-------*/
+@media screen and (max-width: 800px) {
+.topnav{background-color: white;margin-left: 0;float: right;}
+.topnav a{display: none;padding: 0 0;}
+.topnav a.icon{background-color: white;float: right;display: block;}
+.topnav.responsive{position: absolute;z-index: 100;right: 0}
+.topnav.responsive.icone{position: absolute;right: 0;top: 0;}
+.topnav.responsive a{float: none;display: block;text-align: left;}
+header{height: 67.5px;}
+}/*-------\Responsive BurgerMenu-------*/
+
+/*-------Carousel Featured-------*/
+.carousel{margin-top: 120px;width: 90%;margin-left: auto;margin-right: auto;}
+/*item4*/
+@media (min-width: 768px) and (max-width: 991px){
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item{
+        position: absolute;top: 0;right: -33.3333%;z-index: -1;display: block;visibility: visible;}
+}
+@media (min-width: 576px) and (max-width: 768px) {
+/*item3*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;top: 0;right: -50%;z-index: -1;display: block;visibility: visible;}
+}
+@media (min-width: 576px) {
+    .carousel-item {margin-right: 0;}
+    /*item2*/
+    .carousel-inner .active + .carousel-item {display: block;}
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left)+.carousel-item{transition: none;}
+    .carousel-inner .carousel-item-next {position: relative;transform: translate3d(0, 0, 0);}
+    /*left */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item{position: relative;transform:translate3d(-100%, 0, 0);visibility: visible;}
+    /*right*/
+    .carousel-inner .carousel-item-prev.carousel-item-right {position: absolute;top: 0;left: 0;z-index: -1;display: block;visibility: visible;}
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {position: relative;transform:translate3d(100%, 0, 0);visibility: visible;display: block;visibility: visible;}
+}
+@media (min-width: 768px) {
+    .carousel-inner .active + .carousel-item + .carousel-item {display: block;}
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {transition: none;}
+    .carousel-inner .carousel-item-next {position: relative;transform: translate3d(0, 0, 0);}
+    /*left*/
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {position: relative;transform:translate3d(-100%, 0, 0);visibility: visible;}
+    /*right*/
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {position: relative;transform:translate3d(100%, 0, 0);visibility: visible;display: block;visibility: visible;}
+}
+@media (min-width: 991px) {
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {display: block;}
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {transition: none;}
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;top: 0;right: -25%;z-index: -1;display: block;visibility: visible;}
+    /*left*/
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {position: relative;transform:translate3d(-100%, 0, 0);visibility: visible;}
+    /* right*/
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {position: relative;transform: translate3d(100%, 0, 0);visibility: visible;display: block;visibility: visible;}
+}/*-------\Carousel featured------->
