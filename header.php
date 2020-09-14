@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="index.css">
   </head>
   <body>
+    <?php require("function.php") ?>
     <header>
       <img src="img/Bitmap.png" alt="logo">
       <nav class="topnav" id="responsiveNav">
