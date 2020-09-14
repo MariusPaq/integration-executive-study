@@ -37,7 +37,40 @@ header img{position: absolute;top: 10px;left: 8%;}
 .featured h3{text-align: center;text-transform: uppercase;font-weight: 100;margin-top: 55px;}
 /*-------\Featured-------*/
 
+/*-------Services-------*/
+.services{height: 1269px;margin-top: 423px;text-align: center;}
+.services h3{padding-top: 122px;}
+.services p{font-size: 22px;}
+.txt-services{width: 69%;margin-left: auto;margin-right: auto;padding-top: 50px;}
+.card-services{margin-top: 104px;}
+.card{border-radius: 20px;text-align: left;height: 351px;width: 334px;margin-right: 3.5%;margin-bottom: 56px;}
+.firstCard{border: solid #6F7AFD;}
+.afterCard{box-shadow: 0 0 30px lightgray;}
+.card .txt-card{overflow: hidden;height: 90px;}
+.card p{font-size: 16px;}
+.card h5{font-size: 24px;}
+.card-img-top{width: 76px;height: 76px;margin-top: 29px;margin-left: 20px;}
+.link-card{margin-top: 50px;}
+.card a{text-decoration: none;}
+/*-------\Services------*/
+
+/*-------News------*/
+.news{height: 1120px;text-align: center;background-color: #FAFAFA;}
+.news h3{padding-top: 102px;}
+.txt-news{width: 66%;margin-left: auto;margin-right: auto;font-size: 22px;padding-top: 30px;}
+.card-news{height: 406px;margin-top: 60px;}
+.imgCal{height: 15px;margin-top: 6px;margin-left: 5%;}
+.date p{margin-left: 4%;}
+#btNews{margin-left: auto;margin-right: auto;margin-top: 200px;}
+/*-------\News-----*/
+
+/*-------Events-------*/
+.events{height: 1346px;text-align: center;}
+/*-------\Events-------*/
+
+.containerMod{width: 90%;margin-left: auto;margin-right: auto;}
 .txt-blue{color: blue;}
+
 
 /*-------Responsive BurgerMenu-------*/
 @media screen and (max-width: 800px) {
@@ -51,7 +84,7 @@ header{height: 67.5px;}
 }/*-------\Responsive BurgerMenu-------*/
 
 /*-------Carousel Featured-------*/
-.carousel{margin-top: 120px;width: 90%;margin-left: auto;margin-right: auto;}
+.carousel{margin-top: 120px;}
 /*item4*/
 @media (min-width: 768px) and (max-width: 991px){
     .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item{
