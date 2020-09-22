@@ -82,7 +82,7 @@ header img{position: absolute;top: 10px;left: 8%;}
 .navigationEvents{position: absolute;top: 4333px;left: 48%;}
 .cardEvents{height: 308px;width: 37.5%;margin-top: 120px;border-radius: 10px;box-shadow: 0 0 30px lightgray;}
 .rondNavEvents{height: 15px;width: 15px;border-radius: 15px;background-color: gray;margin-left: 6px;margin-right: 6px;}
-.topCardEvents{width: 100%;}
+.topCardEvents{width: 100%;height: 105px;overflow: hidden;}
 .topCardEvents h5{margin-top: 29px;font-size: 24px;margin-left: 3%;text-align: left;}
 .dateCardEvents{width: 76px;height: 76px;border-radius: 10px;background-color: #DCDEF9;margin-top: 29px;margin-left: 31px;color: #717CFF;font-size: 18px;}
 #numDateCardEvents{font-size: 27px;margin-top: 7px;margin-bottom: 0;}
