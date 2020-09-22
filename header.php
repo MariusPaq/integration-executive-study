@@ -10,18 +10,18 @@
   <body>
     <?php require("function.php") ?>
     <header>
-      <img src="img/Bitmap.png" alt="logo">
-      <nav class="topnav" id="responsiveNav">
-        <a href="#">Home</a>
-        <a href="#">About Us</a>
-        <a href="#">Our Services</a>
-        <a href="#">Responsibilties</a>
-        <a href="#">Contry</a>
-        <a href="#">Apply</a>
-        <a href="#" id="burgerMenu" class="icon">
-            <div class="burger" id="burger1"></div>
-            <div class="burger" id="burger2"></div>
-            <div class="burger" id="burger3"></div>
-        </a>
-      </nav>
+        <img src="img/Bitmap.png" alt="logo">
+        <nav class="topnav" id="responsiveNav">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Our Services</a>
+            <a href="#">Responsibilties</a>
+            <a href="#">Contry</a>
+            <a href="#">Apply</a>
+            <a href="#" id="burgerMenu" class="icon">
+                <div class="burger" id="burger1"></div>
+                <div class="burger" id="burger2"></div>
+                <div class="burger" id="burger3"></div>
+            </a>
+        </nav>
     </header>
