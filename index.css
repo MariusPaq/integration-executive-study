@@ -1,3 +1,7 @@
+.containerMod{width: 90%;}
+.txt-blue{color: blue;}
+.marginLRAuto{margin-left: auto;margin-right: auto;}
+
 /*-------Header-------*/
 header{margin-top: 10px;}
 header img{position: absolute;top: 10px;left: 8%;}
@@ -41,11 +45,12 @@ header img{position: absolute;top: 10px;left: 8%;}
 .services{height: 1269px;margin-top: 423px;text-align: center;}
 .services h3{padding-top: 122px;}
 .services p{font-size: 22px;}
-.txt-services{width: 69%;margin-left: auto;margin-right: auto;padding-top: 50px;}
+.txt-services{width: 69%;padding-top: 50px;}
+/*---Cards---*/
 .card-services{margin-top: 104px;}
 .card{border-radius: 20px;text-align: left;height: 351px;width: 334px;margin-right: 3.5%;margin-bottom: 56px;}
 .firstCard{border: solid #6F7AFD;}
-.afterCard{box-shadow: 0 0 30px lightgray;}
+.afterCard, .card{box-shadow: 0 0 30px lightgray;}
 .card .txt-card{overflow: hidden;height: 90px;}
 .card p{font-size: 16px;}
 .card h5{font-size: 24px;}
@@ -57,20 +62,67 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------News------*/
 .news{height: 1120px;text-align: center;background-color: #FAFAFA;}
 .news h3{padding-top: 102px;}
-.txt-news{width: 66%;margin-left: auto;margin-right: auto;font-size: 22px;padding-top: 30px;}
+.txt-news{width: 65%;font-size: 22px;padding-top: 30px;}
+/*---Cards---*/
 .card-news{height: 406px;margin-top: 60px;}
 .imgCal{height: 15px;margin-top: 6px;margin-left: 5%;}
 .date p{margin-left: 4%;}
-#btNews{margin-left: auto;margin-right: auto;margin-top: 200px;}
+#btNews{margin-top: 200px;margin-left: auto;margin-right: auto;}
 /*-------\News-----*/
 
 /*-------Events-------*/
-.events{height: 1346px;text-align: center;}
+.events{height: 890px;text-align: center;overflow: hidden;}
+.events h3{margin-top: 96px;}
+.events .txt-events{width: 65%;margin-top: 30px;font-size: 22px;}
+/*---Slider Cards---*/
+#sliderEvents{margin-left: auto;margin-right: auto;width: 80%;}
+.diapoSliderEvents{position: relative;}
+.ce1{float: left;margin-left: 10%;}
+.ce2{float: right;margin-right: 10%;}
+.navigationEvents{position: absolute;top: 4333px;left: 48%;}
+.cardEvents{height: 308px;width: 37.5%;margin-top: 120px;border-radius: 10px;box-shadow: 0 0 30px lightgray;}
+.rondNavEvents{height: 15px;width: 15px;border-radius: 15px;background-color: gray;margin-left: 6px;margin-right: 6px;}
+.topCardEvents{width: 100%;}
+.topCardEvents h5{margin-top: 29px;font-size: 24px;margin-left: 3%;text-align: left;}
+.dateCardEvents{width: 76px;height: 76px;border-radius: 10px;background-color: #DCDEF9;margin-top: 29px;margin-left: 31px;color: #717CFF;font-size: 18px;}
+#numDateCardEvents{font-size: 27px;margin-top: 7px;margin-bottom: 0;}
+#monthDateCardEvents{position: absolute;top: 70px;left: 54px;}
+.txt-cardEvents{margin-top: 30px;font-size: 17px;text-align: justify;width: 90%;margin-left: auto;margin-right: auto;}
+.dwonCardEvents{width: 90%;margin-left: auto;margin-right: auto;}
+.dwonCardEvents a{margin-top: 10px;float: left;}
+.hourCardEvents{margin-top: 10px;float: right;}
+.hourCardEvents img{width: 20px;height: 20px;margin-top: 5px;}
 /*-------\Events-------*/
 
-.containerMod{width: 90%;margin-left: auto;margin-right: auto;}
-.txt-blue{color: blue;}
+/*-------countries-------*/
+.countries{height: 892px;background-color: #FAFAFA;text-align: center;}
+.countries h3{padding-top: 82px;}
+.countries .txt-countries{width: 65%;margin-top: 30px;font-size: 22px;}
+/*-------\countries-------*/
 
+/*-------testimonial-------*/
+.testimonial{height: 944px;text-align: center;}
+.testimonial h3{padding-top: 115px;}
+.testimonial .txt-testimonial{width: 65%;margin-top: 30px;font-size: 22px;}
+/*-------\testimonial-------*/
+
+/*-------ready-------*/
+.dreams{height: 220px;background-color: #FAFAFA;}
+#txt-dreams{float: left;font-size: 37px;margin-left: 10%;margin-top: 90px;}
+.dreams a{float: right;margin-right: 10%;margin-top: 90px;}
+/*-------\ready------*/
+
+/*-------footer------*/
+.footer{height: 346px;background-color: #717CFF;color: white;}
+.footer a{color: white;text-decoration: none;}
+.txt-footer{margin-left: 10%;margin-top: 64px;}
+.txt-footer img{margin-bottom: 20px;}
+#copyright{margin-top: 50px;}
+.link-footer{margin-top: 64px;margin-left: 9%;}
+.reseaux-footer{margin-right: 10%;}
+.resauxFooter{float: right;margin-top: 210px;width: 50%;}
+.resauxFooter img{margin-left: 10%;}
+/*-------\footer------*/
 
 /*-------Responsive BurgerMenu-------*/
 @media screen and (max-width: 800px) {
