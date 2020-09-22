@@ -51,6 +51,18 @@ function showBDServices2(){
   }
   $req->closeCursor();
 }
+
+function showBDFeatured(){
+  $conn = connectionBd();
+  $query = "SELECT * FROM `featured`";
+  $req = $conn->prepare($query);
+  $req->execute();
+  $result = $req->fetchAll();
+  foreach ($result as $value) {
+    creatCarouselFeatured($value['image'],$value['image2'],$value['image3'],$value['image4']);
+  }
+  $req->closeCursor();
+}
 /*------\Connection BD------*/
 
 function creatCarouselFeatured($img1,$img2,$img3,$img4){

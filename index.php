@@ -17,7 +17,7 @@
     <h3>featured Universities</h3>
     <!--carouselle-->
     <div class="carousel containerMod marginLRAuto">
-        <?php creatCarouselFeatured('img/M1','img/M2','img/M3','img/M4') ?>
+        <?php showBDFeatured(); ?>
     </div><!--carousel-->
 </div><!--featured-->
 <div class="services containerMod marginLRAuto">
