@@ -6,7 +6,7 @@
 header{margin-top: 10px;}
 header img{position: absolute;top: 10px;left: 8%;}
 /*---TopNav---*/
-.topnav{margin-left: 25%;overflow: hidden;}
+.topnav{margin-left: 25%;overflow: hidden;height: 57.5px;}
 .topnav a{padding: 16px 4%;float: left;display: block;text-align: center;text-decoration: none;font-size: 17px;color: black;}
 .topnav a:hover{background-color: white;color: black;}
 .topnav .icon{display: none;}
@@ -20,7 +20,7 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------Apply-------*/
 .apply,.content,.imgApply{height: 681px;max-height: 681px;overflow: hidden;}
 .apply{margin-left: 8%;}
-.content{padding-left: 0;padding-right: 0;}
+.content{padding-left: 0;padding-right: 0;height: 681px;overflow: hidden;}
 .content h2{margin-top: 165px;font-size: 56px;}
 .content #txt-content{margin-top: 25px;font-size: 22px;}
 .content a{margin-top: 50px;}
@@ -42,13 +42,13 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------\Featured-------*/
 
 /*-------Services-------*/
-.services{height: 1269px;margin-top: 423px;text-align: center;}
+.services{height: 1269px;margin-top: 423px;text-align: center;overflow: hidden;}
 .services h3{padding-top: 122px;}
 .services p{font-size: 22px;}
-.txt-services{width: 69%;padding-top: 50px;}
+.txt-services{width: 69%;padding-top: 50px;overflow: hidden;max-height: 122px;}
 /*---Cards---*/
 .card-services{margin-top: 104px;}
-.card{border-radius: 20px;text-align: left;height: 351px;width: 334px;margin-right: 3.5%;margin-bottom: 56px;}
+.card{border-radius: 20px;text-align: left;height: 351px;width: 334px;margin-right: 3.5%;margin-bottom: 56px;overflow: hidden;}
 .firstCard{border: solid #6F7AFD;}
 .afterCard, .card{box-shadow: 0 0 30px lightgray;}
 .card .txt-card{overflow: hidden;height: 90px;}
@@ -62,7 +62,7 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------News------*/
 .news{height: 1120px;text-align: center;background-color: #FAFAFA;}
 .news h3{padding-top: 102px;}
-.txt-news{width: 65%;font-size: 22px;padding-top: 30px;}
+.txt-news{width: 65%;font-size: 22px;padding-top: 30px;height: 96px;overflow: hidden;}
 /*---Cards---*/
 .card-news{height: 406px;margin-top: 60px;}
 .imgCal{height: 15px;margin-top: 6px;margin-left: 5%;}
@@ -73,7 +73,7 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------Events-------*/
 .events{height: 890px;text-align: center;overflow: hidden;}
 .events h3{margin-top: 96px;}
-.events .txt-events{width: 65%;margin-top: 30px;font-size: 22px;}
+.events .txt-events{width: 65%;margin-top: 30px;font-size: 22px;height: 96px;overflow: hidden;}
 /*---Slider Cards---*/
 #sliderEvents{margin-left: auto;margin-right: auto;width: 80%;}
 .diapoSliderEvents{position: relative;}
@@ -97,13 +97,13 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------countries-------*/
 .countries{height: 892px;background-color: #FAFAFA;text-align: center;}
 .countries h3{padding-top: 82px;}
-.countries .txt-countries{width: 65%;margin-top: 30px;font-size: 22px;}
+.countries .txt-countries{width: 65%;margin-top: 30px;font-size: 22px;height: 96px;overflow: hidden;}
 /*-------\countries-------*/
 
 /*-------testimonial-------*/
 .testimonial{height: 944px;text-align: center;}
 .testimonial h3{padding-top: 115px;}
-.testimonial .txt-testimonial{width: 65%;margin-top: 30px;font-size: 22px;}
+.testimonial .txt-testimonial{width: 65%;margin-top: 30px;font-size: 22px;height: 96px;overflow: hidden;}
 /*-------\testimonial-------*/
 
 /*-------ready-------*/
