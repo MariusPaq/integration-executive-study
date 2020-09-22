@@ -1,4 +1,34 @@
 <?php
+/*------Connection BD------*/
+function connectionBd(){
+
+  $dbname="test";
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+     //connection
+     try {
+         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+
+        } catch (Exception $e) {
+          die('Erreur : ' . $e->getMessage());
+        }
+     return $conn;
+}
+
+function showBDNews(){
+     $conn = connectionBd();
+     $query = "SELECT * FROM `product`";
+     $req = $conn->prepare($query);
+     $req->execute();
+     $result = $req->fetchAll();
+     foreach ($result as $value) {
+       creatCardNews($value['image'],$value['title'],$value['description']);
+     }
+     $req->closeCursor();
+}
+/*------\Connection BD------*/
+
 function creatCarouselFeatured($img1,$img2,$img3,$img4){
   echo '
   <div class="top-content">
@@ -57,14 +87,14 @@ function creatCardServices($img,$title,$className){
   ';
 }
 
-function creatCardNews($img,$title){
+function creatCardNews($img,$title,$date){
   echo '
   <div class="card card-news">
     <img src="'.$img.'" alt="...">
     <div class="card-body">
       <div class="date row">
         <img src="img/cal.png" class="imgCal" alt="...">
-        <p>17 Apr 2020</p>
+        <p>'.$date.'</p>
       </div>
       <h5 class="card-title">'.$title.'</h5>
     </div>
@@ -72,57 +102,175 @@ function creatCardNews($img,$title){
   ';
 }
 
-function cardCarousel(){
-  echo '
-    <div class="slidecardCarousel row">
-
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the cards content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-    </div>
-  ';
-}
-
 function creatCarouselEvents(){
   echo '
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">';
-      cardCarousel();
-echo '
+  <div id="sliderEvents">
+    <div id="ce1" class="diapoSliderEvents">
+      <div class="cardEvents ce1 col">
+        <div class="topCardEvents row">
+          <div class="dateCardEvents">
+            <p id="numDateCardEvents">23</p>
+            <p id="monthDateCardEvents">Dec<p>
+          </div>
+          <h5>Macquarie University, Sydney,<br> Australia<h5>
+        </div>
+        <div class="txt-cardEvents">
+        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+        </div>
+        <div class="dwonCardEvents">
+          <a href="#">Learn More →</a>
+          <div class="hourCardEvents row">
+            <img src="img/time.png" alt="time">
+            <p>10:00 AM - 2:00PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="cardEvents ce2 col">
+        <div class="topCardEvents row">
+          <div class="dateCardEvents">
+            <p id="numDateCardEvents">17</p>
+            <p id="monthDateCardEvents">Oct<p>
+          </div>
+          <h5>Federation University, Australia<h5>
+        </div>
+        <div class="txt-cardEvents">
+        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+        </div>
+        <div class="dwonCardEvents">
+          <a href="#">Learn More →</a>
+          <div class="hourCardEvents row">
+            <img src="img/time.png" alt="time">
+            <p>10:00 AM - 2:00PM</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">';
-    cardCarousel();
-echo '
+    <div id="ce2" class="diapoSliderEvents">
+      <div class="cardEvents ce1 col">
+        <div class="topCardEvents row">
+          <div class="dateCardEvents">
+            <p id="numDateCardEvents">28</p>
+            <p id="monthDateCardEvents">Jan<p>
+          </div>
+          <h5>WiiBus University, Australia<h5>
+        </div>
+        <div class="txt-cardEvents">
+        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+        </div>
+        <div class="dwonCardEvents">
+          <a href="#">Learn More →</a>
+          <div class="hourCardEvents row">
+            <img src="img/time.png" alt="time">
+            <p>10:00 AM - 2:00PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="cardEvents ce2 col">
+        <div class="topCardEvents row">
+          <div class="dateCardEvents">
+            <p id="numDateCardEvents">18</p>
+            <p id="monthDateCardEvents">Mar<p>
+          </div>
+          <h5>PK Saiko Kusuo University,Sidney,<br> Australia<h5>
+        </div>
+        <div class="txt-cardEvents">
+        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+        </div>
+        <div class="dwonCardEvents">
+          <a href="#">Learn More →</a>
+          <div class="hourCardEvents row">
+            <img src="img/time.png" alt="time">
+            <p>10:00 AM - 2:00PM</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-';
+    <div id="ce3" class="diapoSliderEvents">
+      <div class="cardEvents ce1 col">
+        <div class="topCardEvents row">
+          <div class="dateCardEvents">
+            <p id="numDateCardEvents">02</p>
+            <p id="monthDateCardEvents">Nov<p>
+          </div>
+          <h5>TrapHouse University, Sydney,<br> Australia<h5>
+        </div>
+        <div class="txt-cardEvents">
+        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+        </div>
+        <div class="dwonCardEvents">
+          <a href="#">Learn More →</a>
+          <div class="hourCardEvents row">
+            <img src="img/time.png" alt="time">
+            <p>10:00 AM - 2:00PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="cardEvents ce2 col">
+      <div class="topCardEvents row">
+        <div class="dateCardEvents">
+          <p id="numDateCardEvents">03</p>
+          <p id="monthDateCardEvents">Dec<p>
+        </div>
+        <h5>Zumba University, Sydney,<br> Australia<h5>
+      </div>
+      <div class="txt-cardEvents">
+      <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+      </div>
+      <div class="dwonCardEvents">
+        <a href="#">Learn More →</a>
+        <div class="hourCardEvents row">
+          <img src="img/time.png" alt="time">
+          <p>10:00 AM - 2:00PM</p>
+        </div>
+      </div>
+      </div>
+    </div>
+    <div id="ce4" class="diapoSliderEvents">
+      <div class="cardEvents ce1 col">
+        <div class="topCardEvents row">
+          <div class="dateCardEvents">
+            <p id="numDateCardEvents">12</p>
+            <p id="monthDateCardEvents">Avr<p>
+          </div>
+          <h5>Screed University, Sydney,<br> Australia<h5>
+        </div>
+        <div class="txt-cardEvents">
+        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+        </div>
+        <div class="dwonCardEvents">
+          <a href="#">Learn More →</a>
+          <div class="hourCardEvents row">
+            <img src="img/time.png" alt="time">
+            <p>10:00 AM - 2:00PM</p>
+          </div>
+        </div>
+      </div>
+      <div class="cardEvents ce2 col">
+        <div class="topCardEvents row">
+          <div class="dateCardEvents">
+            <p id="numDateCardEvents">02</p>
+            <p id="monthDateCardEvents">Jan<p>
+          </div>
+          <h5>Divia University, Australia<h5>
+        </div>
+        <div class="txt-cardEvents">
+        <p>Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p>
+        </div>
+        <div class="dwonCardEvents">
+          <a href="#">Learn More →</a>
+          <div class="hourCardEvents row">
+            <img src="img/time.png" alt="time">
+            <p>10:00 AM - 2:00PM</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="navigationEvents row">
+      <div class="rondNavEvents" id="re1"></div>
+      <div class="rondNavEvents" id="re2"></div>
+      <div class="rondNavEvents" id="re3"></div>
+      <div class="rondNavEvents" id="re4"></div>
+    </div>
+  ';
 }
