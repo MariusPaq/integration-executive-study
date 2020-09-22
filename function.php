@@ -18,7 +18,7 @@ function connectionBd(){
 
 function showBDNews(){
      $conn = connectionBd();
-     $query = "SELECT * FROM `product`";
+     $query = "SELECT * FROM `news`";
      $req = $conn->prepare($query);
      $req->execute();
      $result = $req->fetchAll();
@@ -26,6 +26,30 @@ function showBDNews(){
        creatCardNews($value['image'],$value['title'],$value['description']);
      }
      $req->closeCursor();
+}
+
+function showBDServices(){
+  $conn = connectionBd();
+  $query = "SELECT * FROM `services`";
+  $req = $conn->prepare($query);
+  $req->execute();
+  $result = $req->fetchAll();
+  foreach ($result as $value) {
+    creatCardServices($value['image'],$value['title'],$value['className'],$value['description']);
+  }
+  $req->closeCursor();
+}
+
+function showBDServices2(){
+  $conn = connectionBd();
+  $query = "SELECT * FROM `services2`";
+  $req = $conn->prepare($query);
+  $req->execute();
+  $result = $req->fetchAll();
+  foreach ($result as $value) {
+    creatCardServices($value['image'],$value['title'],$value['className'],$value['description']);
+  }
+  $req->closeCursor();
 }
 /*------\Connection BD------*/
 
@@ -74,13 +98,13 @@ function creatCarouselFeatured($img1,$img2,$img3,$img4){
   ';
 }
 
-function creatCardServices($img,$title,$className){
+function creatCardServices($img,$title,$className,$txt){
   echo '
   <div class="card '.$className.'">
     <img src="'.$img.'" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">'.$title.'</h5>
-      <div class="txt-card"><p class="card-text">Maiores voluptas laboriosam non dolorum perferendis fuga repellat aut. Blanditiis quos in minus. Voluptatum quia quia voluptas voluptatem vero ex possimus. Iure et consectetur dolorem dicta accusantium fugiat.</p></div>
+      <div class="txt-card"><p class="card-text">'.$txt.'</p></div>
       <div class="link-card"><a href="#">Learn More →</a></div>
     </div>
   </div>

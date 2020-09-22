@@ -27,13 +27,10 @@
     </div>
     <div class="card-services">
         <div class="d-flex justify-content-center">
-            <?php creatCardServices('img/imgCard1.png','Career Counselling','firstCard'); ?><!--Card1-->
-            <?php creatCardServices('img/imgCard2.png','University Admissions','afterCard'); ?><!--Card2-->
-            <?php creatCardServices('img/imgCard3.png','Visa Consultancy','afterCard'); ?><!--Card3-->
+            <?php showBDServices(); ?>
         </div><!--END d-flex-->
         <div class="d-flex justify-content-center">
-            <?php creatCardServices('img/imgCard4.png','University Admissions','afterCard'); ?><!--Card3-->
-            <?php creatCardServices('img/imgCard5.png','University Admissions','afterCard'); ?><!--Card5-->
+            <?php showBDServices2(); ?>
         </div><!--\d-flex-->
     </div><!--\card-services-->
 </div><!--services--->
