@@ -3,7 +3,7 @@
 .marginLRAuto{margin-left: auto;margin-right: auto;}
 
 /*-------Header-------*/
-header{margin-top: 10px;}
+header{margin-top: 10px;max-height: 57.5px;}
 header img{position: absolute;top: 10px;left: 8%;}
 /*---TopNav---*/
 .topnav{margin-left: 25%;overflow: hidden;height: 57.5px;}
@@ -20,11 +20,11 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------Apply-------*/
 .apply,.content,.imgApply{height: 681px;max-height: 681px;overflow: hidden;}
 .apply{margin-left: 8%;}
-.content{padding-left: 0;padding-right: 0;height: 681px;overflow: hidden;}
-.content h2{margin-top: 165px;font-size: 56px;}
-.content #txt-content{margin-top: 25px;font-size: 22px;}
+.content{padding-left: 0;padding-right: 0;height: 681px;overflow: hidden;min-height: 681px;}
+.content h2{margin-top: 165px;font-size: 47px;}
+.content #txt-content{margin-top: 25px;font-size: 22px;max-height: 66px;}
 .content a{margin-top: 50px;}
-.resaux{margin-top: 90px;margin-right: 2%;}
+.resaux{margin-top: 90px;margin-right: 10px;}
 /*---Button---*/
 .btn-grad {width: 200px;height: 50px;margin: 10px;margin-left: 0;padding: 30px;
 		background-color: #8471FF;background-size: 200% auto;color: white;
@@ -45,15 +45,16 @@ header img{position: absolute;top: 10px;left: 8%;}
 .services{height: 1269px;margin-top: 423px;text-align: center;overflow: hidden;}
 .services h3{padding-top: 122px;}
 .services p{font-size: 22px;}
-.txt-services{width: 69%;padding-top: 50px;overflow: hidden;max-height: 122px;}
+.txt-services{width: 69%;padding-top: 50px;max-height: 116px;}
+.responsiveCards{margin: auto!important;margin-bottom: 80px!important;}
 /*---Cards---*/
 .card-services{margin-top: 104px;}
 .card{border-radius: 20px;text-align: left;height: 351px;width: 334px;margin-right: 3.5%;margin-bottom: 56px;overflow: hidden;}
-.firstCard{border: solid #6F7AFD;}
+#firstCard{border: solid #6F7AFD;}
 .afterCard, .card{box-shadow: 0 0 30px lightgray;}
 .card .txt-card{overflow: hidden;height: 90px;}
 .card p{font-size: 16px;}
-.card h5{font-size: 24px;}
+.card h5{font-size: 24px;max-height: 28.8px;overflow: hidden;}
 .card-img-top{width: 76px;height: 76px;margin-top: 29px;margin-left: 20px;}
 .link-card{margin-top: 50px;}
 .card a{text-decoration: none;}
@@ -124,14 +125,20 @@ header img{position: absolute;top: 10px;left: 8%;}
 .resauxFooter img{margin-left: 10%;}
 /*-------\footer------*/
 
+@media screen and (max-width: 800px) {
+	.imgApply{display: none;}
+	.content #txt-content{margin-right: 8%;}
+}
+
 /*-------Responsive BurgerMenu-------*/
 @media screen and (max-width: 800px) {
-.topnav{background-color: white;margin-left: 0;float: right;}
+.topnav{background-color: white;margin-left: 0;float: right;overflow: visible;}
 .topnav a{display: none;padding: 0 0;}
-.topnav a.icon{background-color: white;float: right;display: block;}
+.topnav a.icon{background-color: white;float: right;display: block;margin-right: 100%;margin-top: 5px;}
 .topnav.responsive{position: absolute;z-index: 100;right: 0}
 .topnav.responsive.icone{position: absolute;right: 0;top: 0;}
 .topnav.responsive a{float: none;display: block;text-align: left;}
+
 header{height: 67.5px;}
 }/*-------\Responsive BurgerMenu-------*/
 

@@ -20,16 +20,16 @@
         <?php showBDFeatured(); ?>
     </div><!--carousel-->
 </div><!--featured-->
-<div class="services containerMod marginLRAuto">
+<div class="services containerMod marginLRAuto" id="services">
     <h3>Our Services</h3>
     <div class="txt-services marginLRAuto">
         <p>Executive Trade International is an University Application Centre, guiding Bangladeshi students to Australian, British, Canadian and Irish universities!</p>
     </div>
     <div class="card-services">
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" id="flexServices">
             <?php showBDServices(); ?>
         </div><!--END d-flex-->
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center" id="flexServices2">
             <?php showBDServices2(); ?>
         </div><!--\d-flex-->
     </div><!--\card-services-->

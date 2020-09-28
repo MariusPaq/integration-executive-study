@@ -112,7 +112,7 @@ function creatCarouselFeatured($img1,$img2,$img3,$img4){
 
 function creatCardServices($img,$title,$className,$txt){
   echo '
-  <div class="card '.$className.'">
+  <div class="card '.$className.'" id="'.$className.'">
     <img src="'.$img.'" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">'.$title.'</h5>

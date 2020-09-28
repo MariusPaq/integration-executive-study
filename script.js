@@ -80,3 +80,35 @@ rondNavEvents4.addEventListener("click", function(){
   cardsslide3.style.display="none";
   cardsslide4.style.display="block";
 });//Cards Events
+
+//margin auto mb 80px
+function changeclassflex(){
+  var services = document.getElementById('services');
+  var cardsServices = document.getElementById('flexServices');
+  var cardsServices2 = document.getElementById('flexServices2');
+  var cardsfirst = document.getElementById('firstCard');
+  var cardsafter = document.getElementsByClassName('afterCard');
+  var body = document.body;
+  var width = body.clientWidth;
+  if (width <= 800){
+    cardsServices.className = "d-flex flex-column justify-content-center";
+    cardsServices2.className = "d-flex flex-column justify-content-center";
+    cardsfirst.className = "card firstCard responsiveCards";
+    Array.prototype.forEach.call(cardsafter, function(i){
+      i.className = "card afterCard responsiveCards";
+    })
+    services.style.height="2550px";
+    console.log('flex col');
+  } else {
+    cardsServices.className = "d-flex justify-content-center";
+    cardsServices2.className = "d-flex justify-content-center";
+    cardsfirst.className = "card firstCard";
+    Array.prototype.forEach.call(cardsafter, function(i){
+      i.className = "card afterCard";
+    })
+    services.style.height="1269px";
+    console.log('flex row');
+  }
+}
+
+setInterval(changeclassflex,100);
