@@ -83,14 +83,23 @@ rondNavEvents4.addEventListener("click", function(){
 
 //margin auto mb 80px
 function changeclassflex(){
+  //Services
   var services = document.getElementById('services');
   var cardsServices = document.getElementById('flexServices');
   var cardsServices2 = document.getElementById('flexServices2');
   var cardsfirst = document.getElementById('firstCard');
   var cardsafter = document.getElementsByClassName('afterCard');
+  //news
+  var news = document.getElementById('news');
+  var flexCardsNews = document.getElementById('cardsNews');
+  var cardsNews = document.getElementsByClassName('card-news');
+  var btNews = document.getElementById('btNews');
+  //
   var body = document.body;
   var width = body.clientWidth;
+
   if (width <= 800){
+    //Services
     cardsServices.className = "d-flex flex-column justify-content-center";
     cardsServices2.className = "d-flex flex-column justify-content-center";
     cardsfirst.className = "card firstCard responsiveCards";
@@ -98,8 +107,16 @@ function changeclassflex(){
       i.className = "card afterCard responsiveCards";
     })
     services.style.height="2550px";
-    console.log('flex col');
+    //news
+    flexCardsNews.className = "d-flex flex-column justify-content-center";
+    Array.prototype.forEach.call(cardsNews, function(i){
+      i.className = "card card-news responsiveCards";
+    })
+    news.style.height="2000px";
+    flexCardsNews.style.marginTop="40px";
+    btNews.style.marginTop="100px";
   } else {
+    //Services
     cardsServices.className = "d-flex justify-content-center";
     cardsServices2.className = "d-flex justify-content-center";
     cardsfirst.className = "card firstCard";
@@ -107,8 +124,34 @@ function changeclassflex(){
       i.className = "card afterCard";
     })
     services.style.height="1269px";
-    console.log('flex row');
+    //News
+    flexCardsNews.className = "d-flex justify-content-center";
+    Array.prototype.forEach.call(cardsNews, function(i){
+      i.className = "card card-news";
+    })
+    news.style.height="1120px";
+    flexCardsNews.style.marginTop="100px";
+    btNews.style.marginTop="100px";
   }
 }
 
-setInterval(changeclassflex,100);
+function changeDreams(){
+  var txt = document.getElementById('txt-dreams');
+  var bt = document.getElementById('btDreams');
+  var body = document.body;
+  var width = body.clientWidth;
+  if (width <= 800){
+    txt.className = "responsiveDreams";
+    bt.className = "btn-grad responsiveDreams";
+  } else {
+    txt.className = "";
+    bt.className = "btn-grad";
+  }
+}
+
+function loop(){
+  changeclassflex();
+  changeDreams();
+}
+
+setInterval(loop,100);

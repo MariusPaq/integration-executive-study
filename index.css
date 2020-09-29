@@ -46,10 +46,10 @@ header img{position: absolute;top: 10px;left: 8%;}
 .services h3{padding-top: 122px;}
 .services p{font-size: 22px;}
 .txt-services{width: 69%;padding-top: 50px;max-height: 116px;}
-.responsiveCards{margin: auto!important;margin-bottom: 80px!important;}
+.responsiveCards{margin: auto!important;margin-bottom: 20px!important;margin-top: 60px!important;}
 /*---Cards---*/
 .card-services{margin-top: 104px;}
-.card{border-radius: 20px;text-align: left;height: 351px;width: 334px;margin-right: 3.5%;margin-bottom: 56px;overflow: hidden;}
+.card{border-radius: 20px;text-align: left;height: 351px;width: 334px;margin-right: 1.75%;margin-left: 1.75%;margin-bottom: 56px;overflow: hidden;}
 #firstCard{border: solid #6F7AFD;}
 .afterCard, .card{box-shadow: 0 0 30px lightgray;}
 .card .txt-card{overflow: hidden;height: 90px;}
@@ -63,7 +63,7 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------News------*/
 .news{height: 1120px;text-align: center;background-color: #FAFAFA;}
 .news h3{padding-top: 102px;}
-.txt-news{width: 65%;font-size: 22px;padding-top: 30px;height: 96px;overflow: hidden;}
+.txt-news{width: 65%;font-size: 22px;padding-top: 30px;height: 96px;}
 /*---Cards---*/
 .card-news{height: 406px;margin-top: 60px;}
 .imgCal{height: 15px;margin-top: 6px;margin-left: 5%;}
@@ -74,43 +74,32 @@ header img{position: absolute;top: 10px;left: 8%;}
 /*-------Events-------*/
 .events{height: 890px;text-align: center;overflow: hidden;}
 .events h3{margin-top: 96px;}
-.events .txt-events{width: 65%;margin-top: 30px;font-size: 22px;height: 96px;overflow: hidden;}
+.events .txt-events{width: 65%;margin-top: 38px;font-size: 22px;height: 96px;overflow: hidden;}
 /*---Slider Cards---*/
 #sliderEvents{margin-left: auto;margin-right: auto;width: 80%;}
 .diapoSliderEvents{position: relative;}
 .ce1{float: left;margin-left: 10%;}
 .ce2{float: right;margin-right: 10%;}
 .navigationEvents{position: absolute;top: 4333px;left: 48%;}
-.cardEvents{height: 308px;width: 37.5%;margin-top: 120px;border-radius: 10px;box-shadow: 0 0 30px lightgray;}
+.cardEvents{height: 308px;width: 37.5%;margin-top: 120px;border-radius: 10px;box-shadow: 0 0 30px lightgray;overflow: hidden;}
 .rondNavEvents{height: 15px;width: 15px;border-radius: 15px;background-color: gray;margin-left: 6px;margin-right: 6px;}
 .topCardEvents{width: 100%;height: 105px;overflow: hidden;}
 .topCardEvents h5{margin-top: 29px;font-size: 24px;margin-left: 3%;text-align: left;}
 .dateCardEvents{width: 76px;height: 76px;border-radius: 10px;background-color: #DCDEF9;margin-top: 29px;margin-left: 31px;color: #717CFF;font-size: 18px;}
 #numDateCardEvents{font-size: 27px;margin-top: 7px;margin-bottom: 0;}
 #monthDateCardEvents{position: absolute;top: 70px;left: 54px;}
-.txt-cardEvents{margin-top: 30px;font-size: 17px;text-align: justify;width: 90%;margin-left: auto;margin-right: auto;}
+.txt-cardEvents{margin-top: 30px;font-size: 17px;text-align: justify;width: 90%;margin-left: auto;margin-right: auto;overflow: hidden;}
 .dwonCardEvents{width: 90%;margin-left: auto;margin-right: auto;}
 .dwonCardEvents a{margin-top: 10px;float: left;}
 .hourCardEvents{margin-top: 10px;float: right;}
 .hourCardEvents img{width: 20px;height: 20px;margin-top: 5px;}
 /*-------\Events-------*/
 
-/*-------countries-------*/
-.countries{height: 892px;background-color: #FAFAFA;text-align: center;}
-.countries h3{padding-top: 82px;}
-.countries .txt-countries{width: 65%;margin-top: 30px;font-size: 22px;height: 96px;overflow: hidden;}
-/*-------\countries-------*/
-
-/*-------testimonial-------*/
-.testimonial{height: 944px;text-align: center;}
-.testimonial h3{padding-top: 115px;}
-.testimonial .txt-testimonial{width: 65%;margin-top: 30px;font-size: 22px;height: 96px;overflow: hidden;}
-/*-------\testimonial-------*/
-
 /*-------ready-------*/
 .dreams{height: 220px;background-color: #FAFAFA;}
 #txt-dreams{float: left;font-size: 37px;margin-left: 10%;margin-top: 90px;}
 .dreams a{float: right;margin-right: 10%;margin-top: 90px;}
+.responsiveDreams{float: none!important;margin-left: auto!important;margin-right: auto!important;text-align: center;margin-top: 40px!important;padding-top: 40px!important;}
 /*-------\ready------*/
 
 /*-------footer------*/
@@ -125,10 +114,21 @@ header img{position: absolute;top: 10px;left: 8%;}
 .resauxFooter img{margin-left: 10%;}
 /*-------\footer------*/
 
+@media screen and (max-width:1000px) {
+	#txt-dreams{font-size: 30px;}
+	.txt-news p{font-size: 18px;}
+}
+
 @media screen and (max-width: 800px) {
 	.imgApply{display: none;}
 	.content #txt-content{margin-right: 8%;}
+	.news{margin-top: 40px;}
 }
+
+@media screen and (max-width: 600px) {
+	.content #txt-content,.txt-services p,.txt-events p{font-size: 16px;}
+}
+
 
 /*-------Responsive BurgerMenu-------*/
 @media screen and (max-width: 800px) {
